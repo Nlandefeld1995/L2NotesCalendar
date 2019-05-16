@@ -1,0 +1,129 @@
+<html>
+    <head>
+			<link rel="stylesheet" href="style/style.css">
+			<link rel="stylesheet" href="style/fullcalendar.min.css">
+			<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+			<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+			<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "{}",
+				authDomain: "{}.firebaseapp.com",
+				databaseURL: "https://{}.firebaseio.com",
+				projectId: "{}",
+				storageBucket: "{}.appspot.com",
+				messagingSenderId: "{}"
+			};
+			firebase.initializeApp(config);
+			</script>
+			<script type="text/javascript" src="script/domo.js"></script>
+			<script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+			<script type="text/javascript" src="script/moment.min.js"></script>
+			<script type="text/javascript" src="script/fullcalendar.min.js"></script>
+			<script type="text/javascript" src="script/font.js"></script>
+			<script type="text/javascript" src="script/sidebar.min.js"></script>
+			<script type="text/javascript" src="script/loadData.js"></script>
+			<script type="text/javascript" src="script/buzzFire.js"></script>
+			<script type="text/javascript" src="script/script.js"></script>
+		</head>
+    </head>
+    <body>
+			
+			<div id="calendar-wrapper">
+					<div class="sidebar left">
+						<h2>
+							<div id="calendar-search">
+								<input type="text" class="form-control" onkeyup="setTimeout(function(){ get_data(); }, 500);" id='text_search' placeholder="Search By Text">
+							</div>
+							<div id="sidebar-toggle">
+								<div class="burger burger1"><span></span></div>
+							</div>
+						</h2>
+						<hr/>
+						<label class="filter alerts">
+							Alerts/Mobile
+							<input type="checkbox" checked id="filter-alerts">
+						</label>
+						<br>
+						<label class="filter cardui">
+							Card/Ui
+							<input type="checkbox" checked id="filter-cardui">
+						</label>
+						<br>
+						<label class="filter connector">
+							Connectors
+							<input type="checkbox" checked id="filter-connector">
+						</label>
+						<br>
+						<label class="filter dataflow">
+							Dataflows
+							<input type="checkbox" checked id="filter-dataflow">
+						</label>
+						<br>
+						<label class="filter dataquery">
+							DataQuery
+							<input type="checkbox" checked id="filter-dataquery">
+						</label>
+						<br>
+						<label class="filter workbench">
+							WorkBench
+							<input type="checkbox" checked id="filter-workbench">
+						</label>
+						<br>
+						<label class="filter other">
+							Other
+							<input type="checkbox" checked id="filter-other">
+						</label>
+					</div>
+					<h2>
+						L2 Public Notes
+					</h2>
+					<div id="calendar"></div>
+				</div>
+				<div class="card-wrapper">
+					<div class="card" style="opacity: 0; transform: scale(0.8) rotateY(0deg);">
+						<div class="front-panel">
+							<div class="event-title"></div>
+							<p class="event-date"></p>
+							<div class="sk-cube-grid event-loader">
+							  <div class="sk-cube sk-cube1"></div>
+							  <div class="sk-cube sk-cube2"></div>
+							  <div class="sk-cube sk-cube3"></div>
+							  <div class="sk-cube sk-cube4"></div>
+							  <div class="sk-cube sk-cube5"></div>
+							  <div class="sk-cube sk-cube6"></div>
+							  <div class="sk-cube sk-cube7"></div>
+							  <div class="sk-cube sk-cube8"></div>
+							  <div class="sk-cube sk-cube9"></div>
+							</div>
+							<div class="entries"></div>
+						</div>
+						<div class="back-panel">
+							<div class="sk-cube-grid event-loader">
+							  <div class="sk-cube sk-cube1"></div>
+							  <div class="sk-cube sk-cube2"></div>
+							  <div class="sk-cube sk-cube3"></div>
+							  <div class="sk-cube sk-cube4"></div>
+							  <div class="sk-cube sk-cube5"></div>
+							  <div class="sk-cube sk-cube6"></div>
+							  <div class="sk-cube sk-cube7"></div>
+							  <div class="sk-cube sk-cube8"></div>
+							  <div class="sk-cube sk-cube9"></div>
+							</div>
+							<div class="event-detail" data-type="">
+								<!-- SAMPLE DATA -->
+								<p class="emp-name"></p>
+								<p class="event-date"></p>
+								<br/>
+								<br/>
+								<div class = 'text-box1'>
+									<p>THIS IS A SAMPLE DATA</p>
+									<p>THIS WILL BE REPLACED</p>
+									<p>AFTER UI HAS BEEN DESIGNED AND APPROVED</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+    </body>
+</html>
